@@ -1,7 +1,9 @@
-# Maintainer: olav-st <olav.s.th@gmail.com>
+# Contributor: olav-st <olav.s.th@gmail.com>
+# Maintainer: Philipp Schmitt <philipp@schmitt.co>
 
 pkgname=nomachine
-pkgver=4.2.25
+pkgver=4.4.1
+_pkgver="${pkgver}_1"
 pkgrel=1
 pkgdesc="Remote desktop application"
 url="http://www.nomachine.com"
@@ -12,18 +14,17 @@ conflicts=('nxmanager nxwebplayer nxserver nxnode nxclient')
 install=nomachine.install
 
 if [ "${CARCH}" = "x86_64" ]; then
-  md5sums=('ca83243d5d423d1ca0d561f0e3188adf')
-  _carch=_x86_64
+    md5sums=('f8059079c371753a70ad3012564552ad')
+    _carch=_x86_64
 elif [ "${CARCH}" = "i686" ]; then
-  md5sums=('2027ffed6d41e8dd735ebd062ffe9d12')
-  _carch=_i686
+    md5sums=('cbf13999144a166bf8b630ccbb1326b5')
+    _carch=_i686
 fi
-source=("http://download.nomachine.com/download/4.2/Linux/${pkgname}_${pkgver}_${pkgrel}${_carch}.tar.gz")
 
-package()
-{
-  cd "${srcdir}"
+source=("http://download.nomachine.com/download/4.4/Linux/${pkgname}_${_pkgver}${_carch}.tar.gz")
 
-  install -d "${pkgdir}/usr/"
-  cp -a NX "${pkgdir}/usr/NX"
+package() {
+    cd "${srcdir}"
+    install -d "${pkgdir}/usr/"
+    cp -a NX "${pkgdir}/usr/NX"
 }
