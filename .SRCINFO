@@ -1,7 +1,7 @@
 pkgbase = nomachine
 	pkgdesc = Remote desktop application
 	pkgver = 4.4.1
-	pkgrel = 1
+	pkgrel = 2
 	url = http://www.nomachine.com
 	install = nomachine.install
 	arch = x86_64
@@ -9,7 +9,13 @@ pkgbase = nomachine
 	license = custom:"Copyright 2002-2014 NoMachine S.à r.l."
 	conflicts = nxmanager nxwebplayer nxserver nxnode nxclient
 	options = !strip
-	source = http://download.nomachine.com/download/4.4/Linux/nomachine_4.4.1_1.tar.gz
+	source = https://raw.github.com/pschmitt/aur-nomachine/master/nomachine.LICENSE
+	source = https://raw.github.com/pschmitt/aur-nomachine/master/nxsensor.service
+	source = https://raw.github.com/pschmitt/aur-nomachine/master/nxserver.service
+	source = http://download.nomachine.com/download/4.4/Linux/nomachine_4.4.1_1_.tar.gz
+	sha256sums = 3eca94237f350db1890d2feef097e0a8399109d5a431db09bbefd3483073d83e
+	sha256sums = c3987ad7d12d2155e873028fe254b678c073e116fcaeff1565cefc1338915b00
+	sha256sums = 3b82587a58d77ae9560a8f2cbe942bd522b2dded8caf3aac2194946168eeb7e5
 
 pkgname = nomachine
 
